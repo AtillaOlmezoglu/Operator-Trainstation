@@ -1,0 +1,15 @@
+@TrainStations_HostAddress = http://localhost:5073
+
+### Login with Identity cookie
+POST {{TrainStations_HostAddress}}/login?useCookies=true
+Content-Type: application/json
+
+{
+  "email": "admin@test.com",
+  "password": "Admin123!"
+}
+
+### Call protected stations endpoint
+GET {{TrainStations_HostAddress}}/stations
+Accept: application/json
+Cookie: .AspNetCore.Identity.Application=CfDJ8H65jHR9kUlJofv4Va6cZl2wA4FMorKafwkBoQQivOfe_qD2EIs_xyCB6pKB_FBJE90HkJmiQA4HQC8C1JWJPoaXoMzpaXbUxG8n4EF9KrrxIrjKiLF0VvmBmWfAadkHer7nSdleq2dKYkrS0FDU-JYLdKtS5UCrF-vEeaKO7RdXvMDJItEUmg-4mM2ZBA4PghkAGtbfpjQZ0erYfu1E2qJ37JpDnwGukWjnvzIzln6CpxCA56OWBJy6BUtHwfKve_idupA9SVEcGcv3CL4LLeQwtZBarMJ4bzKP65AcbupWdkGtkSUGB4-ZxozCcehXahJoNjJwFHWpgTrh3c0oYJBmtgGSq_2w4aKJ4m7ybbrvPAymfmgC3pMGkhdGjs1j1QtmEGifcVWiTIdSB8bxqQWbCd-RfEOHvKL-AymF1YpNQPhYhT5-OsZjDfw2u5phXYDNyHQmANy2PXcBarSuKddbRO6yRDI8kMXGK2J93HnLMSD1V9VNyglKhtj2Hw6Pt6G62wouCIEMvOWcsmjK6XTaFuI1WrevNaRBkEUsuLOhayCkwZH-POnritiIG6-dpV-BaDInu9DNXLbnDuLH1oxeNcedpMLcBd2N9Nri5rn2Y8wa07OJrOn5iQwmHJPHu-bkrw2qpoYChHZDDMnGvK9HDgFW1t80fL9dC86B-3eJTl03eUGoVPrq2lFO30smY9NtqEg4Bl2hfIQmBH8st6WzZuc3KhDRTOrygRo50G8rM1VY3I-djil0Sj34YmcIbg
